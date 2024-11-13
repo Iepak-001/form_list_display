@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const User = require('./models/User');
 
 const app = express();
-const PORT = 3004;
+const PORT = process.env.PORT || 3004;
 
 // Middleware
 app.use(bodyParser.json());
@@ -48,5 +48,5 @@ app.get('/users', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://form-list-display.onrender.com`);
 });
