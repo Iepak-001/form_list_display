@@ -54,7 +54,7 @@ document.getElementById('userForm').addEventListener('submit', async (event) => 
   const email = document.getElementById('email').value;
 
   // Send user data to backend
-  const response = await fetch('http://localhost:3004/add-user', {
+  const response = await fetch('https://form-list-display.onrender.com/users', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, email }),
@@ -68,7 +68,7 @@ document.getElementById('userForm').addEventListener('submit', async (event) => 
 
 // Load users from backend
 async function loadUsers() {
-  const response = await fetch('http://localhost:3004/users');
+  const response = await fetch('https://form-list-display.onrender.com/users');
   const users = await response.json();
 
   const usersList = document.getElementById('usersList');

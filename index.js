@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 const User = require('./models/User');
 
 const app = express();
-const PORT = process.env.PORT || 3004;
+const PORT = 3004;
 
 // Middleware
-app.use(bodyParser.json());
+app.use(express.json());
 
 const cors = require('cors');
 app.use(cors());
